@@ -5,7 +5,7 @@
 
 void set_high_score(int score) {
     FILE *fp;
-    if ((fp = fopen(".score.ini", "w+")) == NULL) {
+    if ((fp = fopen("/tmp/vi2048/.score.ini", "w+")) == NULL) {
         printf("can not open file!\n");
         printf("\033[?25h");
         exit(0);
@@ -17,7 +17,7 @@ void set_high_score(int score) {
 int get_high_score() {
     FILE *fp;
     int score;
-    if ((fp = fopen(".score.ini", "r")) == NULL) {
+    if ((fp = fopen("/tmp/vi2048/.score.ini", "r")) == NULL) {
         return 0;
     }
     fscanf(fp, "%d\n", &score);
