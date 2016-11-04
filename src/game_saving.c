@@ -10,13 +10,13 @@ void game_save(int save_num, Game *game) {
     int i, j;
     switch (save_num) {
         case 0:
-            fp = fopen("/tmp/vi2048/.savegame1.ini", "w+");
+            fp = fopen("/tmp/.savegame0.ini", "w+");
             break;
         case 1:
-            fp = fopen("/tmp/vi2048/.savegame1.ini", "w+");
+            fp = fopen("/tmp/.savegame1.ini", "w+");
             break;
         case 2:
-            fp = fopen("/tmp/vi2048/.savegame2.ini", "w+");
+            fp = fopen("/tmp/.savegame2.ini", "w+");
             break;
         default:
             fp = NULL;
@@ -41,13 +41,13 @@ int load_game(int load_num, Game *game) {
     int i, j;
     switch (load_num) {
         case 0:
-            fp = fopen("/tmp/vi2048/.savegame0.ini", "r");
+            fp = fopen("/tmp/.savegame0.ini", "r");
             break;
         case 1:
-            fp = fopen("/tmp/vi2048/.savegame1.ini", "r");
+            fp = fopen("/tmp/.savegame1.ini", "r");
             break;
         case 2:
-            fp = fopen("/tmp/vi2048/.savegame2.ini", "r");
+            fp = fopen("/tmp/.savegame2.ini", "r");
             break;
         default:
             fp = NULL;
