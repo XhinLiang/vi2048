@@ -43,6 +43,7 @@ int main() {
                 system("clear");
                 free(game);
                 /* 显示光标 */
+                printf("\033[?25h");
                 return 0;
         }
     }
