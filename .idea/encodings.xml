@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/lib/direction.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib/random_number.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/lib/string_number.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/game.c" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/game.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/game_saving.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/high_score.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/menu.h" charset="UTF-8" />
+  </component>
+</project>
