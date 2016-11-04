@@ -13,27 +13,27 @@ int main() {
     printf("\033[?25l");
     Game *game = game_init();
     while (1) {
-        switch (main_select()) {
+        switch (main_menu_select()) {
             case 0:
-                start_game(game);
+                game_start(game);
                 continue;
             case 1:
                 game_reset(game);
-                start_game(game);
+                game_start(game);
                 continue;
             case 2:
-                select = save_select();
+                select = save_menu_select();
                 if (select == EXIT) {
                     continue;
                 }
-                load_result = game_load(select, game);
+                load_result = load_game(select, game);
                 if (load_result == EXIT) {
                     continue;
                 }
-                start_game(game);
+                game_start(game);
                 continue;
             case 3:
-                select = save_select();
+                select = save_menu_select();
                 if (select == EXIT) {
                     continue;
                 }

@@ -7,6 +7,7 @@ void set_high_score(int score) {
     FILE *fp;
     if ((fp = fopen(".score.ini", "w+")) == NULL) {
         printf("can not open file!\n");
+        printf("\033[?25h");
         exit(0);
     }
     fprintf(fp, "%d\n", score);

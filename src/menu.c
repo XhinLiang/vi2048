@@ -30,7 +30,7 @@ void print_main_item(int select_num) {
         select_array[i] = ' ';
     }
     printf("                            %c  RESUME\n", select_array[0]);
-    printf("                            %c    NEW\n", select_array[1]);
+    printf("                            %c   NEW\n", select_array[1]);
     printf("                            %c   LOAD\n", select_array[2]);
     printf("                            %c   SAVE\n", select_array[3]);
     printf("                            %c   EXIT\n", select_array[4]);
@@ -48,7 +48,7 @@ void main_print(int select_num) {
     print_main_item(select_num);
 }
 
-int save_select() {
+int save_menu_select() {
     int select_num = 0;
     save_print(select_num);
     int direction = get_direction();
@@ -74,7 +74,7 @@ int save_select() {
     return select_num;
 }
 
-int main_select() {
+int main_menu_select() {
     int select_num = 0;
     main_print(select_num);
     int direction = get_direction();

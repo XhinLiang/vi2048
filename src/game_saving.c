@@ -36,7 +36,7 @@ void game_save(int save_num, Game *game) {
     fclose(fp);
 }
 
-int game_load(int load_num, Game *game) {
+int load_game(int load_num, Game *game) {
     FILE *fp;
     int i, j;
     switch (load_num) {
