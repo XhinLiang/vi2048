@@ -71,6 +71,7 @@ sudo make install
 ### Remove
 ``` bash
 sudo rm /usr/local/bin/vi2048
+rm /tmp/.vi2048_*
 ```
 
 ### License
