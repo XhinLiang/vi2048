@@ -9,7 +9,6 @@ Play vi-style 2048 in Linux console.
 
 
 
-
   ##      ##  ##     #########    ########     ##   ##    #######
    ##    ##                 ##    ##    ##     ##   ##    ##   ##
     ##  ##   ###     #########    ##    ##     #######    #######
@@ -23,7 +22,7 @@ Play vi-style 2048 in Linux console.
 
 
                                RESUME
-                                 NEW
+                                NEW
                             *   LOAD
                                 SAVE
                                 EXIT
@@ -58,12 +57,20 @@ Play vi-style 2048 in Linux console.
 
 ```
 
-### Build
+### Build && Install
 **This Project is base on CMake 3.2, you have to install CMake first**
 
 ``` bash
+git clone git@github.com:XhinLiang/vi2048.git
+cd vi2048
 cmake .
 make
+sudo make install
+```
+
+### Remove
+``` bash
+sudo rm /usr/local/bin/vi2048
 ```
 
 ### License
@@ -90,4 +97,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-
