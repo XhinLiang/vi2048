@@ -1,4 +1,4 @@
-## vi2048
+## vi-2048
 
 Play vi-style 2048 in Linux console.
 
