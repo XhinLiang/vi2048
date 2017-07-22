@@ -149,7 +149,7 @@ void insert_random_number(Game *game) {
     int location, random_number = 2;
     int x, y;
 
-    // 统计现在到底有几个 0
+    /* 统计现在到底有几个 0 */
     int x_array[N * N];
     int y_array[N * N];
     int index = 0;
@@ -173,7 +173,7 @@ void insert_random_number(Game *game) {
 }
 
 void slide(Game *game, int direction) {
-    // 标识这次滑动是否对状态造成了影响
+    /* 标识这次滑动是否对状态造成了影响 */
     int change = 0;
     int x, y, x1, y1;
 
@@ -268,7 +268,7 @@ void slide(Game *game, int direction) {
             }
         }
     }
-    // 如果这次滑动对状态有影响，随机在一个空格里插入一个数
+    /* 如果这次滑动对状态有影响，随机在一个空格里插入一个数 */
     if (change) {
         insert_random_number(game);
     }
@@ -277,15 +277,15 @@ void slide(Game *game, int direction) {
 void game_start(Game *game) {
     int direction;
     while (1) {
-        // 打印屏幕
+        /* 打印屏幕 */
         screen_print(game);
-        // 获取键盘输入的值
+        /* 获取键盘输入的值 */
         direction = get_direction();
-        // 如果不是 ESC 键，那么继续游戏
+        /* 如果不是 ESC 键，那么继续游戏 */
         if (direction == EXIT) {
             return;
         }
-        // 将刚刚的键用于滑动
+        /* 将刚刚的键用于滑动 */
         slide(game, direction);
 
         if (is_fail(game)) {

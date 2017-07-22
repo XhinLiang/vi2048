@@ -88,7 +88,6 @@ int main_menu_select() {
             select_num++;
         }
         else if (direction == EXIT) {
-            // exit
             return EXIT;
         }
         if (select_num > 4) {

@@ -1,6 +1,6 @@
-//
-// Created by xhinliang on 16-11-4.
-//
+/**
+ *  Created by xhinliang on 16-11-4.
+ */
 
 const int UP = 'k';
 const int DOWN = 'j';

@@ -14,4 +14,4 @@ void game_start(Game *game);
 
 void game_reset(Game *game);
 
-#endif // VI_2048_GAME_H
+#endif
