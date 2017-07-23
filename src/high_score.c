@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "utils.h"
 #include "high_score.h"
-
 
 void set_high_score(int score) {
     FILE *fp;
-    if ((fp = fopen("/tmp/.vi2048_score.ini", "w+")) == NULL) {
+    char buffer[200];
+    sprintf(buffer, "%s/.vi2048_score.ini", get_home_path());
+    if ((fp = fopen(buffer, "w+")) == NULL) {
         printf("can not open file!\n");
         printf("\033[?25h");
         exit(0);
@@ -17,7 +19,9 @@ void set_high_score(int score) {
 int get_high_score() {
     FILE *fp;
     int score;
-    if ((fp = fopen("/tmp/.vi2048_score.ini", "r")) == NULL) {
+    char buffer[200];
+    sprintf(buffer, "%s/.vi2048_score.ini", get_home_path());
+    if ((fp = fopen(buffer, "r")) == NULL) {
         return 0;
     }
     fscanf(fp, "%d\n", &score);

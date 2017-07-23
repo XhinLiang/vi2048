@@ -10,7 +10,7 @@ typedef struct {
 
 Game *game_init();
 
-void game_start(Game *game);
+void game_resume(Game *game);
 
 void game_reset(Game *game);
 

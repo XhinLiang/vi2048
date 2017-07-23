@@ -4,23 +4,14 @@
 #include "print_tools.h"
 #include "../lib/keys.h"
 #include "../lib/direction.h"
+#include "utils.h"
 
 void game_save(int save_num, Game *game) {
     FILE *fp;
     int i, j;
-    switch (save_num) {
-        case 0:
-            fp = fopen("/tmp/.vi2048_savegame0.ini", "w+");
-            break;
-        case 1:
-            fp = fopen("/tmp/.vi2048_savegame1.ini", "w+");
-            break;
-        case 2:
-            fp = fopen("/tmp/.vi2048_savegame2.ini", "w+");
-            break;
-        default:
-            fp = NULL;
-    }
+    char buffer[200];
+    sprintf(buffer, "%s/.vi2048_save_game_%d", get_home_path(), save_num);
+    fp = fopen(buffer, "w+");
     if (fp == NULL) {
         printf("can not open file!\n");
         /* 显示光标 */
@@ -39,20 +30,9 @@ void game_save(int save_num, Game *game) {
 int load_game(int load_num, Game *game) {
     FILE *fp;
     int i, j;
-    switch (load_num) {
-        case 0:
-            fp = fopen("/tmp/.vi2048_savegame0.ini", "r");
-            break;
-        case 1:
-            fp = fopen("/tmp/.vi2048_savegame1.ini", "r");
-            break;
-        case 2:
-            fp = fopen("/tmp/.vi2048_savegame2.ini", "r");
-            break;
-        default:
-            fp = NULL;
-    }
-
+    char buffer[200];
+    sprintf(buffer, "%s/.vi2048_save_game_%d", get_home_path(), load_num);
+    fp = fopen(buffer, "w+");
     if (fp == NULL) {
         system("clear");
         print_title();

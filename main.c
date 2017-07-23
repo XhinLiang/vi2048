@@ -15,11 +15,11 @@ int main() {
     while (1) {
         switch (main_menu_select()) {
             case 0:
-                game_start(game);
+                game_resume(game);
                 continue;
             case 1:
                 game_reset(game);
-                game_start(game);
+                game_resume(game);
                 continue;
             case 2:
                 select = save_menu_select();
@@ -30,7 +30,7 @@ int main() {
                 if (load_result == EXIT) {
                     continue;
                 }
-                game_start(game);
+                game_resume(game);
                 continue;
             case 3:
                 select = save_menu_select();

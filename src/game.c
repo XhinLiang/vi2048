@@ -274,7 +274,7 @@ void slide(Game *game, int direction) {
     }
 }
 
-void game_start(Game *game) {
+void game_resume(Game *game) {
     int direction;
     while (1) {
         /* 打印屏幕 */

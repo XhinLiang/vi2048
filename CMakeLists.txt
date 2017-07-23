@@ -7,6 +7,7 @@ set(SOURCE_FILES
         src/game.h src/high_score.h src/menu.h src/game_saving.h
         src/game.c src/high_score.c src/menu.c src/game_saving.c
         src/print_tools.c src/print_tools.h
+        src/utils.c src/utils.h
 
         lib/random_number.h lib/random_number.c
         lib/direction.h lib/direction.c
