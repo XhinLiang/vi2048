@@ -8,4 +8,5 @@ install_manifest.txt
 CTestTestfile.cmake
 .savegame*
 .score*
+.vscode
 vi2048

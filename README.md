@@ -1,6 +1,6 @@
 ## vi-2048
 
-Play vi-style 2048 in Linux console.
+Play vi-style 2048 in Linux and macOS console.
 
 ### Pic
 
@@ -51,6 +51,13 @@ Play vi-style 2048 in Linux console.
 ################################################
 
 
+```
+
+### Install with Homebrew or Linuxbrew
+
+```
+brew tap xhinliang/tap
+brew install vi2048
 ```
 
 ### Build && Install
