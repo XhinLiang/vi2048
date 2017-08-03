@@ -34,12 +34,14 @@ int main() {
                 continue;
             case 3:
                 select = save_menu_select();
+                select = save_menu_select();
                 if (select == EXIT) {
                     continue;
                 }
                 game_save(select, game);
                 continue;
             default:
+                /* exit game */
                 system("clear");
                 free(game);
                 /* 显示光标 */
