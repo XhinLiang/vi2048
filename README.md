@@ -77,6 +77,9 @@ sudo rm /usr/local/bin/vi2048
 rm /tmp/.vi2048_*
 ```
 
+### TODO
+- ci
+
 ### License
 ```
 MIT License
