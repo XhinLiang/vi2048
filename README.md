@@ -1,6 +1,6 @@
 ## vi-2048
 
-Play vi-style 2048 in Linux and macOS console.
+Play vi-style 2048 in Linux or macOS console!
 
 ### Pic
 
