@@ -120,7 +120,8 @@ int is_fail(Game *game) {
     printf("                             GAME OVER!\n");
     printf("                           YOU SCORE: %d\n", game->score);
     printf("                           PRESS TAB TO EXIT!\n");
-    while (get_direction() != EXIT);
+    while (get_direction() != EXIT) {
+    }
     return 1;
 }
 

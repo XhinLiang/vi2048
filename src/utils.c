@@ -1,9 +1,12 @@
 #include "utils.h"
-#include <unistd.h>
 #include <pwd.h>
+#include <stdlib.h>
+#include <unistd.h>
 
 char *get_home_path() {
     struct passwd *pw = getpwuid(getuid());
-    char *home_dir = pw->pw_dir;
-    return home_dir;
+    if (pw && pw->pw_dir) {
+        return pw->pw_dir;
+    }
+    return getenv("HOME");
 }

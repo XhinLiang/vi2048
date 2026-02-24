@@ -2,6 +2,13 @@
 
 Play vi-style 2048 in Linux or macOS console!
 
+### Quickstart
+``` bash
+cmake -S . -B build
+cmake --build build
+./build/vi2048
+```
+
 ### Pic
 
 #### menu
@@ -61,14 +68,19 @@ brew install vi2048
 ```
 
 ### Build && Install
-**This Project is base on CMake 3.2, you have to install CMake first**
+**This project is based on CMake 3.2; install CMake first.**
 
 ``` bash
-git clone git@github.com:XhinLiang/vi2048.git
+git clone https://github.com/XhinLiang/vi2048.git
 cd vi2048
-cmake .
-make
-sudo make install
+cmake -S . -B build
+cmake --build build
+sudo cmake --install build
+```
+
+### Test
+``` bash
+bash scripts/smoke_test.sh
 ```
 
 ### Remove
@@ -78,7 +90,7 @@ rm /tmp/.vi2048_*
 ```
 
 ### TODO
-- ci
+- More automated tests
 
 ### License
 ```

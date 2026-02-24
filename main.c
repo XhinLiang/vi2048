@@ -3,8 +3,7 @@
 #include "src/game.h"
 #include "src/menu.h"
 #include "src/game_saving.h"
-
-extern const int EXIT;
+#include "lib/keys.h"
 
 int main() {
     int select = 0;
