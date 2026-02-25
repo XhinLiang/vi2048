@@ -1,3 +1,4 @@
 #!/bin/bash
-cmake .
-make
+set -e
+cmake -S . -B build
+cmake --build build
