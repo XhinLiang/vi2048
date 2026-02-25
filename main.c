@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 #include "src/game.h"
 #include "src/menu.h"
 #include "src/game_saving.h"
@@ -9,6 +10,7 @@ extern const int EXIT;
 int main() {
     int select = 0;
     int load_result;
+    srand((unsigned) time(NULL));
     /* 隐藏光标 */
     printf("\033[?25l");
     Game *game = game_init();
@@ -33,7 +35,6 @@ int main() {
                 game_resume(game);
                 continue;
             case 3:
-                select = save_menu_select();
                 select = save_menu_select();
                 if (select == EXIT) {
                     continue;
