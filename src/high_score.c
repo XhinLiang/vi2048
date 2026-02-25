@@ -18,13 +18,15 @@ void set_high_score(int score) {
 
 int get_high_score() {
     FILE *fp;
-    int score;
+    int score = 0;
     char buffer[200];
     sprintf(buffer, "%s/.vi2048_score.ini", get_home_path());
     if ((fp = fopen(buffer, "r")) == NULL) {
         return 0;
     }
-    fscanf(fp, "%d\n", &score);
+    if (fscanf(fp, "%d", &score) != 1) {
+        score = 0;
+    }
     fclose(fp);
     return score;
 }
