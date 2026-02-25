@@ -1,24 +1,30 @@
-cmake_minimum_required(VERSION 3.10)
-project(vi_2048 C)
-set(VERSION "1.0.1")
+cmake_minimum_required(VERSION 3.16)
 
-set(CMAKE_C_STANDARD 99)
-set(CMAKE_C_STANDARD_REQUIRED ON)
+project(vi2048 VERSION 1.0.1 LANGUAGES C)
 
-set(SOURCE_FILES
-        src/game.h src/high_score.h src/menu.h src/game_saving.h
-        src/game.c src/high_score.c src/menu.c src/game_saving.c
-        src/print_tools.c src/print_tools.h
-        src/utils.c src/utils.h
+include(GNUInstallDirs)
 
-        lib/random_number.h lib/random_number.c
-        lib/direction.h lib/direction.c
-        lib/keys.h lib/keys.c
+add_executable(vi2048)
 
-        main.c)
+target_sources(vi2048
+    PRIVATE
+        main.c
+        src/game.c
+        src/game_saving.c
+        src/high_score.c
+        src/menu.c
+        src/print_tools.c
+        src/utils.c
+        lib/direction.c
+        lib/keys.c
+        lib/random_number.c
+)
 
-add_executable(vi2048 ${SOURCE_FILES})
-if (CMAKE_C_COMPILER_ID MATCHES "Clang|AppleClang|GNU")
+target_compile_features(vi2048 PRIVATE c_std_99)
+set_target_properties(vi2048 PROPERTIES C_EXTENSIONS OFF)
+
+if(CMAKE_C_COMPILER_ID MATCHES "Clang|AppleClang|GNU")
     target_compile_options(vi2048 PRIVATE -Wall -Wextra -Wpedantic)
 endif()
-install(TARGETS vi2048 DESTINATION bin)
+
+install(TARGETS vi2048 RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
